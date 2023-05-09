@@ -1,11 +1,6 @@
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-dados = pd.read_csv('/content/gasolina.csv')
-dados.to_csv('dados.csv')
+dados = pd.read_csv('/content/test_ebac_2/gasolina.csv')
 
 with sns.axes_style('whitegrid'):
 
-  grafico = sns.lineplot(data=dados, x="dia", y="p/gasolina", palette="pastel")
+  grafico = sns.lineplot(data=dados, x="dia", y="venda", palette="pastel")
   plt.savefig('gasolina.png')
